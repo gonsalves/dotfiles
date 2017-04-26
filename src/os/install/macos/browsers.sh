@@ -13,5 +13,3 @@ print_in_purple "\n   Browsers\n"
 printf "\n"
 
 brew_install "Firefox" "firefox" "caskroom/cask" "cask"
-
-fi
