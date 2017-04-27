@@ -49,13 +49,13 @@ brew_install "Flux" "flux" "caskroom/cask" "cask"
 brew_install "Gihub Desktop" "github-desktop" "caskroom/cask" "cask"
 brew_install "Hazel" "hazel" "caskroom/cask" "cask"
 brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
+brew_install "iStat Menu" "istat-menus" "caskroom/cask" "cask"
 brew_install "Matts TraceRoute (mtr)" "mtr"
-brew_install "Menu Meters (Yujitach Fork)" "yujitach-menumeters" "caskroom/cask" "cask"
-
     # allow mtr to run without sudo
     mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//')
     sudo chmod 4755 $mtrlocation/sbin/mtr
     sudo chown root $mtrlocation/sbin/mtr
+
 # brew cask install npod
 
 printf "\n"
