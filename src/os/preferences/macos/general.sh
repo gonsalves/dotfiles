@@ -17,6 +17,5 @@ execute "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool
 
 print_in_purple "\n   First Run\n\n"
 
-# Start SizeUp at login
-execute "defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true" \
-	"Start Dropbox for the first time"
+execute "defaults write com.manytricks.Moom SUEnableAutomaticChecks -bool true" \
+	"Set Moom to auto update"
