@@ -15,7 +15,7 @@ execute "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool
 execute "defaults write com.apple.menuextra.battery ShowPercent -string 'NO'" \
     "Hide battery percentage from the menu bar"
 
-execute "sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true" \
+execute "sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false" \
     "Show language menu in the top right corner of the boot screen"
 
 execute "defaults write com.apple.CrashReporter UseUNC 1" \
@@ -46,8 +46,8 @@ execute "defaults write -g AppleFontSmoothing -int 2" \
 execute "defaults write -g AppleShowScrollBars -string 'Always'" \
     "Always show scrollbars"
 
-execute "defaults write -g NSDisableAutomaticTermination -bool true" \
-    "Disable automatic termination of inactive apps"
+execute "defaults write -g NSDisableAutomaticTermination -bool false" \
+    "Enable automatic termination of inactive apps"
 
 execute "defaults write -g NSNavPanelExpandedStateForSaveMode -bool true" \
     "Expand save panel by default"
@@ -81,14 +81,15 @@ execute "sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist Cont
 execute "for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
             sudo defaults write \"\${domain}\" dontAutoLoad -array \
                 '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' \
-                '/System/Library/CoreServices/Menu Extras/Volume.menu'
+                '/System/Library/CoreServices/Menu Extras/Clock.menu' \
+                '/System/Library/CoreServices/Menu Extras/User.menu'
          done \
             && sudo defaults write com.apple.systemuiserver menuExtras -array \
                 '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' \
                 '/System/Library/CoreServices/Menu Extras/AirPort.menu' \
                 '/System/Library/CoreServices/Menu Extras/Battery.menu' \
-                '/System/Library/CoreServices/Menu Extras/Clock.menu'
+                '/System/Library/CoreServices/Menu Extras/Volume.menu'
         " \
-    "Hide Time Machine and Volume icons from the menu bar"
+    "Hide Time Machine and Clock from the menu bar, and show others"
 
 killall "SystemUIServer" &> /dev/null

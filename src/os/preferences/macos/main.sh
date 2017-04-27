@@ -11,6 +11,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+./general.sh
 ./app_store.sh
 ./chrome.sh
 ./dashboard.sh
@@ -25,5 +26,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./terminal.sh
 ./textedit.sh
 ./trackpad.sh
-./transmission.sh
 ./ui_and_ux.sh
