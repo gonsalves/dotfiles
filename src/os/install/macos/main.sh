@@ -11,5 +11,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./bash.sh
 ./git.sh
 ./homebrew_cask.sh
-
-./cleanup.sh
+./mas.sh
+#./cleanup.sh

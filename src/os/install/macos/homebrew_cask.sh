@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   The Basics\n"
 
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 brew install mas
 
 printf "\n"
