@@ -9,7 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 print_in_purple "\n   The Basics\n"
 
 brew tap caskroom/cask
-brew install mas
+brew_install "mas" "mas" "caskroom/cask" "cask"
 
 printf "\n"
 
@@ -25,9 +25,9 @@ brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
 print_in_purple "\n   Communication\n"
 
 brew_install "Skype" "skype" "caskroom/cask" "cask"
-brew cask install slack
-brew cask install telegram
-brew cask install whatsapp
+brew_install "Slack" "slack" "caskroom/cask" "cask"
+brew_install "Telegram" "telegram" "caskroom/cask" "cask"
+brew_install "WhatsApp Desktop" "whatsapp" "caskroom/cask" "cask"
 
 printf "\n"
 
@@ -35,18 +35,21 @@ printf "\n"
 
 print_in_purple "\n   Utilities\n"
 
-brew cask install tripmode
-brew cask install moom
-brew cask install flux
-brew cask install github-desktop
-brew cask install hazel
-brew cask install menumeters
-brew cask install the-unarchiver
-brew install mtr
+brew_install "TripMode" "tripmode" "caskroom/cask" "cask"
+brew_install "Moom" "moom" "caskroom/cask" "cask"
+brew_install "Flux" "flux" "caskroom/cask" "cask"
+brew_install "Gihub Desktop" "github-desktop" "caskroom/cask" "cask"
+brew_install "Hazel" "hazel" "caskroom/cask" "cask"
+brew_install "MenuMeters" "menumeters" "caskroom/cask" "cask"
+brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
+brew_install "Matts TraceRoute (mtr)" "mtr" "caskroom/cask" "cask"
+brew_install "Menu Meters (Yujitach Fork)" "yujitach-menumeters" "caskroom/cask" "cask"
+
     # allow mtr to run without sudo
     mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//')
     sudo chmod 4755 $mtrlocation/sbin/mtr
     sudo chown root $mtrlocation/sbin/mtr
+# brew cask install npod
 
 printf "\n"
 
@@ -54,9 +57,10 @@ printf "\n"
 
 print_in_purple "\n   Design Tools\n\n"
 
-brew cask install sketch
-brew cask install zeplin
-brew cask install iconjar
+brew_install "Sketch" "sketch" "caskroom/cask" "cask"
+brew_install "Zeplin" "zeplin" "caskroom/cask" "cask"
+brew_install "Icon Jar" "iconjar" "caskroom/cask" "cask"
+
 # Also want to be able to install Craft by Invision
 
 printf "\n"
@@ -65,14 +69,13 @@ printf "\n"
 
 print_in_purple "\n   The Rest\n\n"
 
-brew cask install dropbox
-brew cask install calibre
-brew cask install macdown
-brew cask install microsoft-office
-# brew cask install npod
-brew cask install nvalt
-brew cask install soulver
-brew cask install sublime-text
+brew_install "Dropbox" "dropbox" "caskroom/cask" "cask"
+brew_install "Calibre" "calibre" "caskroom/cask" "cask"
+brew_install "MacDown (Markdown Editor" "macdown" "caskroom/cask" "cask"
+brew_install "Microsoft Office" "microsoft-office" "caskroom/cask" "cask"
+brew_install "nvAlt" "nvalt" "caskroom/cask" "cask"
+brew_install "Sublime Text" "sublime-text" "caskroom/cask" "cask"
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
