@@ -24,7 +24,7 @@ brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
 
 print_in_purple "\n   Communication\n"
 
-brew cask install skype
+brew_install "Skype" "skype" "caskroom/cask" "cask"
 brew cask install slack
 brew cask install telegram
 brew cask install whatsapp
