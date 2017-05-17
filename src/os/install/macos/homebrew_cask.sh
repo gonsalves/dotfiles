@@ -14,8 +14,6 @@ brew_install 'Git' 'git'
 brew_install 'Mac App Store' 'mas'
 brew_install "Dropbox" "dropbox" "caskroom/cask" "cask"
 brew_install "Calibre" "calibre" "caskroom/cask" "cask"
-brew_install "MacDown (Markdown Editor)" "macdown" "caskroom/cask" "cask"
-brew_install "Microsoft Office" "microsoft-office" "caskroom/cask" "cask"
 brew_install "Notational Velocity (Alt)" "nvalt" "caskroom/cask" "cask"
 brew_install "Sublime Text" "sublime-text" "caskroom/cask" "cask"
 brew_install "Alfred" "alfred" "caskroom/cask" "cask"
@@ -26,8 +24,9 @@ printf "\n"
 
 print_in_purple "\n   Internet\n"
 
-brew_install "Firefox" "firefox" "caskroom/cask" "cask"
-brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
+brew_install "Mozilla Firefox" "firefox" "caskroom/cask" "cask"
+brew_install "Google Chrome" "google-chrome" "caskroom/cask" "cask"
+brew_install "Google Hangouts" "google-hangouts" "caskroom/cask" "cask"
 
 printf "\n"
 
@@ -74,6 +73,17 @@ brew_install 'FFmpeg' 'ffmpeg'
 brew_install 'ImageMagick' 'imagemagick --with-webp'
 
 # Also want to be able to install Craft by Invision
+
+printf "\n"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+print_in_purple "\n   Business Software\n\n"
+
+brew_install "Quickbooks Desktop" "quickbooks" "caskroom/cask" "cask"
+brew_install "MacDown (Markdown Editor)" "macdown" "caskroom/cask" "cask"
+brew_install "Microsoft Office" "microsoft-office" "caskroom/cask" "cask"
+
 
 printf "\n"
 

@@ -31,7 +31,7 @@ killall "Dock" &> /dev/null
 # 12: Notification Center
 
 # Top left screen corner → Mission Control
-execute "defaults write com.apple.dock wvous-tl-corner -int 2 && \
+execute "defaults write com.apple.dock wvous-tl-corner -int 4 && \
 		 defaults write com.apple.dock wvous-tl-modifier -int 10" \
 	"Top Left: Mission Control"
 
@@ -44,3 +44,6 @@ execute "defaults write com.apple.dock wvous-tr-corner -int 0 && \
 execute "defaults write com.apple.dock wvous-bl-corner -int 4 && \
 		 defaults write com.apple.dock wvous-bl-modifier -int 0" \
 	"Bottom Left: Show Desktop"
+
+execute "chmod 600 ~/Library/Preferences/com.apple.dock.plist && \
+		 chown $USER ~/Library/Preferences/com.apple.dock.plist"

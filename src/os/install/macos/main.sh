@@ -10,5 +10,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./homebrew.sh
 ./bash.sh
 ./homebrew_cask.sh
+./fonts.sh
 ./mas.sh
 #./cleanup.sh
