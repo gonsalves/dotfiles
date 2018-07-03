@@ -68,9 +68,12 @@ print_in_purple "\n   Design Tools\n\n"
 brew_install "Sketch" "sketch" "caskroom/cask" "cask"
 brew_install "Zeplin" "zeplin" "caskroom/cask" "cask"
 brew_install "Icon Jar" "iconjar" "caskroom/cask" "cask"
-brew_install "Monotype Sky Fonts" "skyfonts" "caskroom/cask" "cask"
 brew_install 'FFmpeg' 'ffmpeg'
 brew_install 'ImageMagick' 'imagemagick --with-webp'
+brew_install 'Font Base' "fontbase" "caskroom/cask" "cask"
+
+# Deprecated
+# brew_install "Monotype Sky Fonts" "skyfonts" "caskroom/cask" "cask"
 
 # Also want to be able to install Craft by Invision
 
@@ -84,7 +87,6 @@ brew_install "Quickbooks Online" "quickbooks-online" "caskroom/cask" "cask"
 brew_install "Microsoft Office" "microsoft-office" "caskroom/cask" "cask"
 brew_install "Typora (Markdown Editor" "typora" "caskroom/cask" "cask"
 brew_install "Basecamp" "basecamp" "caskroom/cask" "cask"
-
 
 printf "\n"
 
